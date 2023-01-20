@@ -9,11 +9,18 @@ public class Todo {
     private Date targetDate;
     private boolean isDone;
     
-    // constructor, toString, equals and hash code
-    
-    public Todo() {
-    	
+    public Todo(int id, String user, String desc, Date targetDate, boolean isDone) {
+    	id = this.id;
+    	user = this.user;
+    	desc = this.desc;
+    	targetDate = this.targetDate;
+    	isDone = this.isDone;
     }
+    
+    @Override
+	public String toString() {
+		return "Todo [user=" + user + ", desc=" + desc +  ", targetDate=" + targetDate +  ", isDone=" + isDone + "]";
+	}
     
 	public int getId() {
 		return id;
