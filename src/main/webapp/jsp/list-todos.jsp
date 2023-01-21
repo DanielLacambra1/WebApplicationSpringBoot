@@ -13,7 +13,7 @@
 	    Lista de tareas pendientes:
 	    ${todos} 
 	    <br/>
-	    Your Name is : ${name}
+	    Your Name is : ${name} 
 	</body>
 
 </html>

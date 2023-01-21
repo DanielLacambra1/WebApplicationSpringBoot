@@ -1,11 +1,12 @@
 package com.bloque5rubrica2.springboot.bloque5rubrica2.model;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Todo {
 	private int id;
     private String user;
-    private String desc;
+	private String desc;
     private Date targetDate;
     private boolean isDone;
     
@@ -20,6 +21,24 @@ public class Todo {
     @Override
 	public String toString() {
 		return "Todo [user=" + user + ", desc=" + desc +  ", targetDate=" + targetDate +  ", isDone=" + isDone + "]";
+	}
+    
+    @Override
+	public int hashCode() {
+		return Objects.hash(desc, id, isDone, targetDate, user);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Todo other = (Todo) obj;
+		return Objects.equals(desc, other.desc) && id == other.id && isDone == other.isDone
+				&& Objects.equals(targetDate, other.targetDate) && Objects.equals(user, other.user);
 	}
     
 	public int getId() {
@@ -52,6 +71,5 @@ public class Todo {
 	public void setDone(boolean isDone) {
 		this.isDone = isDone;
 	}
-    
     
 }

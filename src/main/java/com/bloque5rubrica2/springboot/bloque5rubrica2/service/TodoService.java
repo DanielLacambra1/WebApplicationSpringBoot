@@ -13,7 +13,7 @@ public class TodoService {
 	private static List<Todo> todos = new ArrayList<Todo>();
     private static int todoCount = 3;
     static {
-        todos.add(new Todo(1, " user", "Estudiar Spring MVC", new Date(),false));
+        todos.add(new Todo(1, "user", "Estudiar Spring MVC", new Date(),false));
         todos.add(new Todo(2, "user", "Estudiar SpringBoot", new Date(), false));
         todos.add(new Todo(3, "user", "Estudiar Servlet", new Date(),false));
     }

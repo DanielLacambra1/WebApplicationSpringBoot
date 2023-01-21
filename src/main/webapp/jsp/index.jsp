@@ -3,18 +3,12 @@
 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-	<!--  LOGIN DE LA APLICACIÓN -->
 <html>
 	<head>
-		<title>Login</title>
+		<title>App</title>
 	</head>
 	
 	<body>
-	    <font color="red">${errorMessage}</font>
-	    <form method="post">
-	        Nombre : <input type="text" name="name" />
-	        Contraseña : <input type="password" name="password" /> 
-	        <input type="submit" />
-	    </form>
+	    <a href="/login">Click para iniciar sesión </a>
 	</body>
 </html>
